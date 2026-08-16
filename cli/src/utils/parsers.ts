@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -8,6 +8,9 @@ import { isValidPackageID } from "@nowsecure/platform-lib";
 import { PlatformEnum } from "@nowsecure/platform-lib/lib/types";
 import { CommandCore } from "./command-core";
 
+/**
+ * TODO: Describe exported const
+ */
 export const UUID_RE =
   /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
 
@@ -16,6 +19,9 @@ export const UUID_RE =
  * separated lists.
  * @param list
  * @returns
+ */
+/**
+ * TODO: Describe exported function
  */
 export function flattenCommaSeparated(
   list: string | string[] | undefined
@@ -42,6 +48,9 @@ export function flattenCommaSeparated(
  * @param context
  * @returns
  */
+/**
+ * TODO: Describe exported function
+ */
 export function parseUuidLists(
   uuids: string[] | string | undefined,
   context: CommandCore
@@ -66,6 +75,12 @@ export function parseUuidLists(
  * @returns the reference, lowercased.
  */
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+/**
+ * TODO: Describe exported 
+ * @param {*} input
+ * @param {*} context
+ * @returns {*} string,
+ */
 export async function parseRef(input: string, context: any) {
   if (!input.match(UUID_RE)) {
     context.error(`"${input}" is not a valid reference`);
@@ -79,6 +94,12 @@ export async function parseRef(input: string, context: any) {
  * If the input does not parse to a valid date context.error will be called.
  */
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+/**
+ * TODO: Describe exported 
+ * @param {*} input
+ * @param {*} context
+ * @returns {*} string,
+ */
 export async function parseDateTime(input: string, context: any) {
   const epochTime = Date.parse(input);
   if (isNaN(epochTime)) {
@@ -87,6 +108,9 @@ export async function parseDateTime(input: string, context: any) {
   return new Date(epochTime).toISOString();
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export function checkValidPackageId(
   packageName: string,
   platform: PlatformEnum,
@@ -103,6 +127,11 @@ export function checkValidPackageId(
  * - it has 3 sections
  * - all 3 are valid base64
  * - the first two decode to valid JSON
+ */
+/**
+ * TODO: Describe exported 
+ * @param {*} token
+ * @returns {*} string)
  */
 export function checkJWT(token: string) {
   function checkSection(section: string, checkJSON: boolean) {
@@ -125,3 +154,4 @@ export function checkJWT(token: string) {
     checkSection(fields[2], false)
   );
 }
+

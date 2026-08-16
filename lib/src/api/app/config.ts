@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -10,6 +10,9 @@ import { AppAnalysisConfig } from "../../types";
 
 type Hash = Record<string, unknown>;
 
+/**
+ * TODO: Describe exported function
+ */
 export async function getAnalysisConfig(
   client: NowSecureClient,
   appRef?: string
@@ -32,3 +35,4 @@ export async function getAnalysisConfig(
   }
   return appConfig;
 }
+

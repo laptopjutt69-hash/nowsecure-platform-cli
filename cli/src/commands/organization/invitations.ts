@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -8,6 +8,10 @@ import { BaseCommand } from "../../utils/base-command";
 import { Column } from "../../utils/table";
 import { Invitation } from "@nowsecure/platform-lib/lib/types";
 
+/**
+ * TODO: Describe exported const
+ * @returns {*} Column<Invitation
+ */
 export const invitationDefaultColumns: Column<Invitation>[] = [
   { heading: "REF", data: "ref" },
   { heading: "EMAIL", data: "email" },
@@ -17,6 +21,9 @@ export const invitationDefaultColumns: Column<Invitation>[] = [
   { heading: "EXPIRES", data: "expiredAt" },
 ];
 
+/**
+ * TODO: Describe exported class
+ */
 export default class ListInvitations extends BaseCommand {
   static description = "List invitations";
 
@@ -29,3 +36,4 @@ export default class ListInvitations extends BaseCommand {
     return ret;
   }
 }
+

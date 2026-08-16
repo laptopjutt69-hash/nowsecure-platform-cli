@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -29,6 +29,9 @@ function readFile(fdOrPath: fs.PathOrFileDescriptor) {
   });
 }
 
+/**
+ * TODO: Describe exported class
+ */
 export default class UpdateConfig extends BaseCommand {
   static description = "Update the application's analysis configuration";
 
@@ -149,3 +152,4 @@ export default class UpdateConfig extends BaseCommand {
     return await outputAnalysisConfig(this, platform, appRef);
   }
 }
+

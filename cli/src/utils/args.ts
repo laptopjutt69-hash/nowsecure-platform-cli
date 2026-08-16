@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -7,6 +7,9 @@
 import { Flags, Args } from "@oclif/core";
 import { parseRef } from "./parsers";
 
+/**
+ * TODO: Describe exported const
+ */
 export const packageArgs = {
   platform: Args.string({
     description: "Platform",
@@ -17,6 +20,9 @@ export const packageArgs = {
   }),
 };
 
+/**
+ * TODO: Describe exported const
+ */
 export const packageArgsRequired = {
   platform: Args.string({
     description: "Platform",
@@ -29,6 +35,9 @@ export const packageArgsRequired = {
   }),
 };
 
+/**
+ * TODO: Describe exported const
+ */
 export const groupFlags = {
   group: Flags.string({
     char: "g",
@@ -39,3 +48,4 @@ export const groupFlags = {
     parse: parseRef,
   }),
 };
+

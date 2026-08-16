@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -11,6 +11,9 @@ import { User } from "../../types";
 import { OrgUsersQueryVariables as OrgUsersOptions } from "../../generated/graphql";
 export { OrgUsersQueryVariables as OrgUsersOptions } from "../../generated/graphql";
 
+/**
+ * TODO: Describe exported function
+ */
 export async function orgUsers(
   client: NowSecureClient,
   options: OrgUsersOptions
@@ -18,3 +21,4 @@ export async function orgUsers(
   const ret = await orgUsersQuery(client, options);
   return ret.my.organization.users || [];
 }
+

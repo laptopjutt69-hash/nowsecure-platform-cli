@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -15,6 +15,9 @@ import { Invitation } from "../../types";
 
 export { CreateInvitationMutationVariables as InviteUserOptions } from "../../generated/graphql";
 
+/**
+ * TODO: Describe exported function
+ */
 export async function listInvitations(
   client: NowSecureClient
 ): Promise<Invitation[]> {
@@ -22,6 +25,9 @@ export async function listInvitations(
   return ret.my.organization.invitations;
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export async function inviteUser(
   client: NowSecureClient,
   options: InviteUserOptions
@@ -30,6 +36,9 @@ export async function inviteUser(
   return ret.organization.createUserInvitation;
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export async function revokeInvitation(
   client: NowSecureClient,
   ref: string
@@ -37,3 +46,4 @@ export async function revokeInvitation(
   const ret = await revokeInvitationMutation(client, { ref });
   return ret.organization.revokeUserInvitation.ref;
 }
+

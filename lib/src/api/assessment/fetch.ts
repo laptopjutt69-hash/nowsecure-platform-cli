@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -29,6 +29,9 @@ export type PollSections = Exclude<AssessmentSections, "includeReport">;
  *
  * @param client NowSecureClient object
  * @param reportId assessment reference to retrieve
+ */
+/**
+ * TODO: Describe exported function
  */
 export async function fetchAssessment(
   client: NowSecureClient,
@@ -67,6 +70,9 @@ export async function fetchAssessment(
  * @param timeout timeout in milliseconds. Pass 0 for no timeout
  * @returns The completed assessment or null
  */
+/**
+ * TODO: Describe exported function
+ */
 export async function pollForReport(
   client: NowSecureClient,
   reportId: string,
@@ -102,3 +108,4 @@ export async function pollForReport(
   }
   return assessment;
 }
+

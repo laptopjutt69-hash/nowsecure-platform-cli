@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -17,6 +17,9 @@ import {
 } from "./platform-config";
 import { CustomError } from "./errors";
 
+/**
+ * TODO: Describe exported type
+ */
 export type RequestConfig = Pick<
   AxiosRequestConfig,
   | "onDownloadProgress"
@@ -26,6 +29,9 @@ export type RequestConfig = Pick<
   | "timeoutErrorMessage"
 >;
 
+/**
+ * TODO: Describe exported type
+ */
 export type JSONType =
   | string
   | number
@@ -33,11 +39,24 @@ export type JSONType =
   | null
   | { [index: string]: JSONType }
   | JSONType[];
+/**
+ * TODO: Describe exported type
+ * @returns {*} string]:
+ */
 export type JSONObject = { [index: string]: JSONType };
+/**
+ * TODO: Describe exported type
+ */
 export type JSONArray = JSONType[];
 
+/**
+ * TODO: Describe exported const
+ */
 export const USER_AGENT = `NowSecure API library ${version}`;
 
+/**
+ * TODO: Describe exported class
+ */
 export class GraphQLError extends CustomError {
   constructor(
     public readonly errors: GraphQLErrorData[],
@@ -47,13 +66,24 @@ export class GraphQLError extends CustomError {
   }
 }
 
+/**
+ * TODO: Describe exported 
+ * @param {*} doc
+ * @returns {*} DocumentNode)
+ */
 export function getGqlString(doc: DocumentNode) {
   return doc.loc && doc.loc.source.body;
 }
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface NSClientOptions {
   userAgent?: string;
 }
+/**
+ * TODO: Describe exported class
+ */
 export class NowSecureClient {
   private client: AxiosInstance;
   private apiUrl: string;
@@ -205,3 +235,4 @@ export class NowSecureClient {
     return this.client;
   }
 }
+

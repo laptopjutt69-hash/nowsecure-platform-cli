@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -17,6 +17,9 @@ const defaultColumns: Column<Application>[] = [
   { heading: "GROUP", data: (x) => (x && x.group.name) || "" },
 ];
 
+/**
+ * TODO: Describe exported class
+ */
 export default class ListApps extends BaseCommand {
   static description = "List available applications on Platform";
 
@@ -87,3 +90,4 @@ export default class ListApps extends BaseCommand {
     return apps;
   }
 }
+

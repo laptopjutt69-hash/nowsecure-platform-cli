@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -6,10 +6,25 @@
 
 import { Assessment, Finding } from "./types/platform";
 
+/**
+ * TODO: Describe exported const
+ * @returns {*} //api.nowsecure.com";
+ */
 export const DEFAULT_API_URL = "https://api.nowsecure.com";
+/**
+ * TODO: Describe exported const
+ * @returns {*} //lab-api.nowsecure.com";
+ */
 export const DEFAULT_LAB_API_URL = "https://lab-api.nowsecure.com";
+/**
+ * TODO: Describe exported const
+ * @returns {*} //app.nowsecure.com";
+ */
 export const DEFAULT_LAB_UI_URL = "https://app.nowsecure.com";
 
+/**
+ * TODO: Describe exported class
+ */
 export class PlatformConfig {
   constructor(
     /** API token */
@@ -27,6 +42,9 @@ export class PlatformConfig {
   }
 }
 
+/**
+ * TODO: Describe exported const
+ */
 export const assessmentLink = (
   labUrl: string,
   assessment: Assessment,
@@ -37,3 +55,4 @@ export const assessmentLink = (
     ? `${assessmentUrl}/findings#finding-${finding.checkId}`
     : assessmentUrl;
 };
+

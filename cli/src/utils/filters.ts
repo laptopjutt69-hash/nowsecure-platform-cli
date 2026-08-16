@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -10,6 +10,11 @@ import { Flags } from "@oclif/core";
 import { FlagProps } from "@oclif/core/lib/interfaces/parser";
 import { flattenCommaSeparated } from "./parsers";
 
+/**
+ * TODO: Describe exported 
+ * @param {*} additional
+ * @returns {*} Partial<FlagProps
+ */
 export function makeFilterFlags(additional: Partial<FlagProps> = {}) {
   return {
     "min-severity": Flags.string({
@@ -55,8 +60,14 @@ export function makeFilterFlags(additional: Partial<FlagProps> = {}) {
   };
 }
 
+/**
+ * TODO: Describe exported 
+ */
 export const filterFlags = makeFilterFlags();
 
+/**
+ * TODO: Describe exported type
+ */
 export type FilterFlags = {
   "min-severity"?: string;
   include?: string[];
@@ -78,6 +89,11 @@ const severityOptions: Record<string, Severity> = {
   i: Severity.Info,
 };
 
+/**
+ * TODO: Describe exported 
+ * @param {*} flags
+ * @returns {*} FilterFlags):
+ */
 export function getFilter(flags: FilterFlags): Filter | undefined {
   if (flags["all-findings"]) {
     return undefined;
@@ -92,3 +108,4 @@ export function getFilter(flags: FilterFlags): Filter | undefined {
     "include-checks": filterIncludes,
   });
 }
+

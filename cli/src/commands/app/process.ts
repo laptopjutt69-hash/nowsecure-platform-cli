@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -11,6 +11,9 @@ import { getGroupRef, BaseCommand, groupFlags } from "../../utils";
 import ProgressBar from "progress";
 import { AnalysisType, RequestConfig } from "@nowsecure/platform-lib";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class ProcessBinary extends BaseCommand {
   static summary = "Upload and analyze an application binary";
 
@@ -85,3 +88,4 @@ and "Failed Dynamic Analysis" due to the lack of a dynamic analysis.`,
     return ret;
   }
 }
+

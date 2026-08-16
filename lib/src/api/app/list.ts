@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -12,10 +12,16 @@ import {
 } from "../../generated/graphql";
 import { listApplicationsQuery } from "../../queries";
 
+/**
+ * TODO: Describe exported type
+ */
 export type Application = NonNullable<AppsListQuery["auto"]["applications"][0]>;
 
 export { AppsListQueryVariables as ListApplicationOptions } from "../../generated/graphql";
 
+/**
+ * TODO: Describe exported function
+ */
 export async function listApplications(
   client: NowSecureClient,
   options?: ListApplicationOptions,
@@ -26,3 +32,4 @@ export async function listApplications(
   apps.forEach((x) => filterAssessment(x.latestCompleteAssessment, filter));
   return apps;
 }
+

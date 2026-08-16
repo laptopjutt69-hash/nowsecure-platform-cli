@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -17,6 +17,9 @@ function makeUrl(
   return `/app/${platform}/${packageName}/assessment/?group=${groupRef}${appStoreQuery}`;
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export async function startAssessment(
   client: NowSecureClient,
   platform: PlatformEnum,
@@ -27,3 +30,4 @@ export async function startAssessment(
   const url = makeUrl(platform, packageName, groupRef, isAppStore);
   return await client.post<StartAssessmentResponse>(url, {});
 }
+

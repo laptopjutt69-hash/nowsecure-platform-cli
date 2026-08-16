@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -8,6 +8,9 @@ import { PlatformAPI } from "@nowsecure/platform-lib";
 import { CommandCore } from "./command-core";
 import { parseUuidLists } from "./parsers";
 
+/**
+ * TODO: Describe exported function
+ */
 export async function getGroupsList(
   client: PlatformAPI,
   command: CommandCore,
@@ -32,6 +35,9 @@ export async function getGroupsList(
   return ret;
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export async function getGroupRef(
   client: PlatformAPI,
   command: CommandCore,
@@ -53,3 +59,4 @@ export async function getGroupRef(
 
   return undefined;
 }
+

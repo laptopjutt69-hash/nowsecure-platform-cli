@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -12,6 +12,9 @@ import { parseRef } from "../../utils/parsers";
 import { convertToSarif } from "@nowsecure/sarif";
 import { JSONObject, parseKeyConfig } from "@nowsecure/platform-lib";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class SarifReport extends BaseCommand {
   static description = "Create a SARIF report from an assessment";
 
@@ -119,3 +122,4 @@ export default class SarifReport extends BaseCommand {
     return report;
   }
 }
+

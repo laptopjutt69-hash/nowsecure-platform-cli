@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -19,3 +19,4 @@ export class ValueError extends CustomError {}
 
 /** Missing or unknown key in object */
 export class KeyError extends CustomError {}
+

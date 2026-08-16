@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -13,6 +13,9 @@ const runnerUrl = (
   groupRef: string
 ) => `/app/${platform}/${packageName}/runner?group=${groupRef}`;
 
+/**
+ * TODO: Describe exported function
+ */
 export async function uploadRunnerBinary(
   client: NowSecureClient,
   stream: NodeJS.ReadableStream,
@@ -25,6 +28,9 @@ export async function uploadRunnerBinary(
   return await client.postStream<AppResource>(url, stream, config);
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export async function deleteRunnerBinary(
   client: NowSecureClient,
   platform: PlatformEnum,
@@ -34,3 +40,4 @@ export async function deleteRunnerBinary(
   const url = runnerUrl(platform, packageName, groupRef);
   return await client.delete<AppResource>(url);
 }
+

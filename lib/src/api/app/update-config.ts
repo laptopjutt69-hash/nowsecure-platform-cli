@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -31,18 +31,27 @@ import {
 } from "../../generated/graphql";
 import { deleteRunnerBinary, uploadRunnerBinary } from "./runner";
 
+/**
+ * TODO: Describe exported type
+ */
 export type UpdateSearchDataInput = {
   key: string;
   value?: string;
   searchStrings?: string[];
 };
 
+/**
+ * TODO: Describe exported type
+ */
 export type UpdateSearchTermInput = {
   name: string;
   searchStrings?: string[];
   value?: string;
 };
 
+/**
+ * TODO: Describe exported type
+ */
 export type UpdateConfigOptions = {
   appium?: Partial<
     Pick<
@@ -58,6 +67,9 @@ export type UpdateConfigOptions = {
   searchTerms?: UpdateSearchTermInput[] | null;
 };
 
+/**
+ * TODO: Describe exported enum
+ */
 export enum RunnerType {
   None = "none",
   JavaScript = "js",
@@ -488,6 +500,9 @@ async function processRunner(
   };
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export async function processConfigUpdate(
   defaultSearchData: AnalysisConfigSearchDataEntry[],
   defaultAction: AnalysisConfigActionsEntry,
@@ -524,6 +539,9 @@ export async function processConfigUpdate(
   };
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export async function updateAnalysisConfig(
   client: NowSecureClient,
   appRef: string,
@@ -594,9 +612,13 @@ export async function updateAnalysisConfig(
   }
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export async function resetAnalysisConfig(
   client: NowSecureClient,
   appRef: string
 ) {
   await resetAppAnalysisConfigMutation(client, { appRef });
 }
+

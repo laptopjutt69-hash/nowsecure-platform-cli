@@ -1,9 +1,12 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
  */
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface DependenciesOutput {
   /**
    * The version of Deputy.
@@ -23,6 +26,9 @@ export interface DependenciesOutput {
   success: boolean;
 }
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface Component {
   ecosystem: "CocoaPods" | "Maven" | "Native" | "npm" | "NuGet" | "Commercial";
   /**
@@ -44,6 +50,9 @@ export interface Component {
   source: string | null;
 }
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface Vulnerability {
   id: string;
   title: string;
@@ -53,3 +62,4 @@ export interface Vulnerability {
   cwe: string;
   reference: string;
 }
+

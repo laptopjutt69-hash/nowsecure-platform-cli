@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -9,6 +9,9 @@ import { Flags } from "@oclif/core";
 import { appRefArgs, appRefFlags, resolveAppRef } from "../../utils/app-ref";
 import { BaseCommand } from "../../utils/base-command";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class ArchiveApp extends BaseCommand {
   static description = "Archive or unarchive an app";
 
@@ -43,3 +46,4 @@ export default class ArchiveApp extends BaseCommand {
     return response;
   }
 }
+

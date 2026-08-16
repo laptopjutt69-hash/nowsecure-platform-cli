@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -13,6 +13,10 @@ import {
 import { AppAnalysisConfig } from "@nowsecure/platform-lib/lib/types";
 import { PlatformAPI } from "@nowsecure/platform-lib";
 
+/**
+ * TODO: Describe exported const
+ * @returns {*} Column<AnalysisConfigSearchDataEntry
+ */
 export const searchDataDefaultColumns: Column<AnalysisConfigSearchDataEntry>[] =
   [
     { heading: "NAME", data: "key" },
@@ -31,6 +35,9 @@ function convertTerm(
   };
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export async function outputAnalysisConfig(
   command: BaseCommand,
   platform: PlatformAPI,
@@ -82,6 +89,9 @@ export async function outputAnalysisConfig(
   return config;
 }
 
+/**
+ * TODO: Describe exported class
+ */
 export default class GetAppConfig extends BaseCommand {
   static description = "Retrieve the analysis configuration";
 
@@ -100,3 +110,4 @@ export default class GetAppConfig extends BaseCommand {
     return await outputAnalysisConfig(this, platform, appRef);
   }
 }
+
