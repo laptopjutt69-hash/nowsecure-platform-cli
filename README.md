@@ -94,7 +94,7 @@ Running `ns-cli help` will provide a top level list of the options that are avai
 ```
 $ ns-cli help
 VERSION
-  @nowsecure/cli/1.0.0-alpha.2 darwin-arm64 node-v16.19.1
+  @nowsecure/cli/1.0.0-alpha.2 darwin-arm64 node-v20.x
 
 USAGE
   $ ns-cli [COMMAND]
@@ -200,7 +200,7 @@ This is a Monorepo containing the following items.
 
 ## Building
 
-> Ensure you are using Node >= 16 and have `yarn` installed before proceeding.
+> Ensure you are using Node >= 20 and have `yarn` installed before proceeding.
 
 If you are looking to build a specific library or tool, see
 [Building specific tools](#building-specific-tools).
