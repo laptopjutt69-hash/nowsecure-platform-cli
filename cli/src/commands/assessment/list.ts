@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -30,6 +30,9 @@ const listAssessmentsDefaultColumns: Column<Assessment>[] = [
   { heading: "STATUS", data: (x) => x.analysis?.status || "" },
 ];
 
+/**
+ * TODO: Describe exported class
+ */
 export default class ListAssessments extends BaseCommand {
   static description = "List assessments";
 
@@ -173,3 +176,4 @@ export default class ListAssessments extends BaseCommand {
     return assessments;
   }
 }
+

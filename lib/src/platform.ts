@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -60,6 +60,9 @@ import {
   AnalysisType,
 } from "./api";
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface PlatformAPI {
   archiveApp(appRef: string, unarchive?: boolean): Promise<AppResource>;
 
@@ -153,6 +156,9 @@ export interface PlatformAPI {
   userInfo(): Promise<FullUser>;
 }
 
+/**
+ * TODO: Describe exported class
+ */
 export class Platform implements PlatformAPI {
   private _client: NowSecureClient;
   constructor(client: NowSecureClient) {
@@ -327,3 +333,4 @@ export class Platform implements PlatformAPI {
     return userInfo(this._client);
   }
 }
+

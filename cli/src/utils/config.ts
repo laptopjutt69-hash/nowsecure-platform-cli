@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -11,6 +11,9 @@ import { get } from "lodash";
 import * as path from "path";
 import { ValueError } from "@nowsecure/platform-lib";
 
+/**
+ * TODO: Describe exported class
+ */
 export class ConfigFile {
   /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   protected values: Record<string, any> = {};
@@ -65,6 +68,9 @@ export class ConfigFile {
   }
 }
 
+/**
+ * TODO: Describe exported type
+ */
 export type ConfigValues = {
   token: string | undefined;
   graphql: string | undefined;
@@ -72,10 +78,16 @@ export type ConfigValues = {
   ui: string | undefined;
 };
 
+/**
+ * TODO: Describe exported type
+ */
 export type ConfigInput = {
   [P in keyof ConfigValues]: ConfigValues[P] | null;
 };
 
+/**
+ * TODO: Describe exported class
+ */
 export class CliConfigFile extends ConfigFile {
   configValues(profile?: string): ConfigValues {
     profile = profile || "default";
@@ -131,3 +143,4 @@ export class CliConfigFile extends ConfigFile {
     });
   }
 }
+

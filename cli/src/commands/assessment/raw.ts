@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -8,6 +8,9 @@ import { Args } from "@oclif/core";
 import { JSONObject } from "@nowsecure/platform-lib";
 import { BaseCommand } from "../../utils/base-command";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class RawAssessmentData extends BaseCommand {
   static description = "Get the raw data for an assessment";
 
@@ -34,3 +37,4 @@ export default class RawAssessmentData extends BaseCommand {
     return raw;
   }
 }
+

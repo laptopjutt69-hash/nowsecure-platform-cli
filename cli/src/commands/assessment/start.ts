@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -13,6 +13,9 @@ import { appRefArgs, appRefFlags } from "../../utils/app-ref";
 import { BaseCommand } from "../../utils/base-command";
 import { getGroupRef } from "../../utils/group-list";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class StartAssessment extends BaseCommand {
   static description = "Start an assessment";
 
@@ -79,3 +82,4 @@ export default class StartAssessment extends BaseCommand {
     return response;
   }
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -13,9 +13,15 @@ export function sleep(milliseconds: number): Promise<void> {
   });
 }
 
+/**
+ * TODO: Describe exported const
+ */
 export const ANDROID_PACKAGE_RE =
   /^[A-Za-z][A-Za-z0-9_]*(.[A-Za-z][A-Za-z0-9_]*)*$/;
 
+/**
+ * TODO: Describe exported const
+ */
 export const IOS_PACKAGE_RE = /^[A-Za-z0-9\-.]+$/;
 
 /**
@@ -25,8 +31,15 @@ export const IOS_PACKAGE_RE = /^[A-Za-z0-9\-.]+$/;
  * @param platform ios or android
  * @returns true if the name is valid for the specified platform
  */
+/**
+ * TODO: Describe exported 
+ * @param {*} packageName
+ * @param {*} platform
+ * @returns {*} string,
+ */
 export function isValidPackageID(packageName: string, platform: PlatformEnum) {
   const re =
     platform === PlatformEnum.Android ? ANDROID_PACKAGE_RE : IOS_PACKAGE_RE;
   return re.test(packageName);
 }
+

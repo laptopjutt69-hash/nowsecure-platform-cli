@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -54,6 +54,9 @@ import {
   ResetAppAnalysisConfig,
 } from "./generated/graphql";
 
+/**
+ * TODO: Describe exported function
+ */
 export function makeQuery<RET extends JSONObject, ARGS extends JSONObject>(
   query: DocumentNode | string
 ): (
@@ -66,6 +69,9 @@ export function makeQuery<RET extends JSONObject, ARGS extends JSONObject>(
   };
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export function makeMutation<RET extends JSONObject, ARGS extends JSONObject>(
   query: DocumentNode | string
 ): (
@@ -78,73 +84,120 @@ export function makeMutation<RET extends JSONObject, ARGS extends JSONObject>(
   };
 }
 
+/**
+ * TODO: Describe exported const
+ */
 export const listApplicationsQuery = makeQuery<
   AppsListQuery,
   AppsListQueryVariables
 >(AppsList);
 
+/**
+ * TODO: Describe exported const
+ */
 export const assessmentInfoQuery = makeQuery<
   AssessmentInfoQuery,
   AssessmentInfoQueryVariables
 >(AssessmentInfo);
 
+/**
+ * TODO: Describe exported const
+ */
 export const assessmentsQuery = makeQuery<
   AssessmentsQuery,
   AssessmentsQueryVariables
 >(Assessments);
 
+/**
+ * TODO: Describe exported const
+ */
 export const listInvitationsQuery = makeQuery<
   InvitationsQuery,
   InvitationsQueryVariables
 >(Invitations);
 
+/**
+ * TODO: Describe exported const
+ */
 export const licenseValidQuery = makeQuery<
   LicenseValidQuery,
   LicenseValidQueryVariables
 >(LicenseValid);
 
+/**
+ * TODO: Describe exported 
+ * @param {*} Roles
+ */
 export const rolesQuery = makeQuery<RolesQuery, RolesQueryVariables>(Roles);
 
+/**
+ * TODO: Describe exported const
+ */
 export const userGroupsQuery = makeQuery<
   UserGroupsQuery,
   UserGroupsQueryVariables
 >(UserGroups);
 
+/**
+ * TODO: Describe exported const
+ */
 export const orgUsersQuery = makeQuery<OrgUsersQuery, OrgUsersQueryVariables>(
   OrgUsers
 );
 
+/**
+ * TODO: Describe exported const
+ */
 export const currentUserQuery = makeQuery<
   CurrentUserQuery,
   CurrentUserQueryVariables
 >(CurrentUser);
 
+/**
+ * TODO: Describe exported const
+ */
 export const orgGroupsQuery = makeQuery<
   OrgGroupsQuery,
   OrgGroupsQueryVariables
 >(OrgGroups);
 
+/**
+ * TODO: Describe exported const
+ */
 export const appAnalysisConfigQuery = makeQuery<
   AppAnalysisConfigQuery,
   AppAnalysisConfigQueryVariables
 >(AppAnalysisConfig);
 
+/**
+ * TODO: Describe exported const
+ */
 export const inviteUserMutation = makeMutation<
   CreateInvitationMutation,
   CreateInvitationMutationVariables
 >(CreateInvitation);
 
+/**
+ * TODO: Describe exported const
+ */
 export const revokeInvitationMutation = makeMutation<
   RevokeInvitationMutation,
   RevokeInvitationMutationVariables
 >(RevokeInvitation);
 
+/**
+ * TODO: Describe exported const
+ */
 export const updateAppAnalysisConfigMutation = makeMutation<
   UpdateAppAnalysisConfigMutation,
   UpdateAppAnalysisConfigMutationVariables
 >(UpdateAppAnalysisConfig);
 
+/**
+ * TODO: Describe exported const
+ */
 export const resetAppAnalysisConfigMutation = makeMutation<
   ResetAppAnalysisConfigMutation,
   ResetAppAnalysisConfigMutationVariables
 >(ResetAppAnalysisConfig);
+

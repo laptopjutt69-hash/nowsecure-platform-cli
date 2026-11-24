@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -7,6 +7,9 @@
 import { NowSecureClient } from "../../client";
 import { AppResource } from "../../types";
 
+/**
+ * TODO: Describe exported function
+ */
 export async function archiveApp(
   client: NowSecureClient,
   appRef: string,
@@ -26,3 +29,4 @@ export async function archiveApp(
   const checkUrl = `/app/${pre.platform}/${pre.package}?group=${pre.group}`;
   return await client.get<AppResource>(checkUrl);
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -14,3 +14,4 @@ export /* async */ function getAppVulnerabilities(
   const url = `/resource/app/${appRef}/vulnerability`;
   return client.get<VulnerabilityResponse>(url);
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -13,6 +13,9 @@ import {
   packageArgsRequired,
 } from "../../utils";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class CreateAppResource extends BaseCommand {
   static description = "Create an app resource without a binary";
 
@@ -77,3 +80,4 @@ export default class CreateAppResource extends BaseCommand {
     return response;
   }
 }
+

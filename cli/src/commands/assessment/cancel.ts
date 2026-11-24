@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -8,6 +8,9 @@ import { CancelAssessmentResponse } from "@nowsecure/platform-lib/lib/types";
 import { Args } from "@oclif/core";
 import { BaseCommand } from "../../utils/base-command";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class CancelAssessment extends BaseCommand {
   static description = "Cancel a running assessment";
 
@@ -29,3 +32,4 @@ export default class CancelAssessment extends BaseCommand {
     return ret;
   }
 }
+

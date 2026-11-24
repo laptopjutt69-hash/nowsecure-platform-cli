@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -11,11 +11,17 @@ import { filterFlags, getFilter } from "../../utils/filters";
 import { parseRef } from "../../utils/parsers";
 import { Column } from "../../utils/table";
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface ShowAssessmentFieldOptions {
   ref?: boolean;
   status?: boolean;
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export function assessmentDefaultFields({
   ref,
   status,
@@ -35,6 +41,10 @@ export function assessmentDefaultFields({
   return ret.filter((x) => !!x) as Column<Assessment>[];
 }
 
+/**
+ * TODO: Describe exported const
+ * @returns {*} Column<Finding
+ */
 export const showFindingsDefaultColumns: Column<Finding>[] = [
   { heading: "ID", data: "checkId" },
   { heading: "KIND", data: "kind" },
@@ -102,6 +112,9 @@ export abstract class ShowAssessmentBase extends BaseCommand {
   }
 }
 
+/**
+ * TODO: Describe exported class
+ */
 export default class ShowAssessment extends ShowAssessmentBase {
   static description = "Show the details and findings of an assessment";
 
@@ -168,3 +181,4 @@ export default class ShowAssessment extends ShowAssessmentBase {
     return assessment;
   }
 }
+

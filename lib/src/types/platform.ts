@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -30,6 +30,9 @@ export {
  * # References
  * * <https://docs.nowsecure.com/auto/api/spec/#api-Applications-submitBuild>
  */
+/**
+ * TODO: Describe exported interface
+ */
 export interface ProcessApplicationResponse {
   ref: string;
   application: string;
@@ -55,6 +58,9 @@ export interface ProcessApplicationResponse {
   events: unknown;
 }
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface UploadApplicationResponse {
   digest: string;
   algorithm: string;
@@ -68,10 +74,16 @@ export interface UploadApplicationResponse {
   downloaded_appstore_application_key: string;
 }
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface CancelAssessmentResponse {
   status: AssessmentJobSummaryStatus;
 }
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface StartAssessmentResponse {
   ref: string;
   application: string;
@@ -113,6 +125,9 @@ export interface StartAssessmentResponse {
   task_status: AssessmentJobSummaryStatus;
 }
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface AppResource {
   ref: string;
   account: string;
@@ -127,6 +142,9 @@ export interface AppResource {
   config: JSONObject;
 }
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface VulnerabilityEntry {
   unique_vulnerability_id: string;
   finding_id: string;
@@ -143,28 +161,63 @@ export interface VulnerabilityEntry {
   finding_title: string;
 }
 
+/**
+ * TODO: Describe exported type
+ */
 export type VulnerabilityResponse = VulnerabilityEntry[];
 
+/**
+ * TODO: Describe exported type
+ */
 export type Assessment = NonNullable<
   AssessmentsQuery["auto"]["assessments"][0]
 >;
 
+/**
+ * TODO: Describe exported type
+ */
 export type Finding = NonNullable<
   NonNullable<Assessment["report"]>["findings"][0]
 >;
 
+/**
+ * TODO: Describe exported type
+ */
 export type Group = GroupFieldsFragment;
 
+/**
+ * TODO: Describe exported type
+ */
 export type User = UserFieldsFragment;
 
+/**
+ * TODO: Describe exported type
+ * @returns {*} Group[]
+ */
 export type FullUser = UserFieldsFragment & { groups: Group[] };
 
+/**
+ * TODO: Describe exported type
+ */
 export type Invitation = InvitationFieldsFragment;
 
+/**
+ * TODO: Describe exported type
+ */
 export type Role = RoleFieldsFragment;
 
+/**
+ * TODO: Describe exported type
+ */
 export type Permissions = PermissionFieldsFragment;
 
+/**
+ * TODO: Describe exported type
+ */
 export type DefaultAnalysisConfig = DefaultAnalysisConfigFieldsFragment;
 
+/**
+ * TODO: Describe exported type
+ */
 export type AppAnalysisConfig = AppAnalysisConfigFieldsFragment;
+

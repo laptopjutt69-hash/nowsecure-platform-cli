@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -7,6 +7,9 @@
 import { NowSecureClient } from "../../client";
 import { licenseValidQuery } from "../../queries";
 
+/**
+ * TODO: Describe exported function
+ */
 export async function isLicenseValid(
   client: NowSecureClient,
   licenseWorkaround: boolean
@@ -23,3 +26,4 @@ export async function isLicenseValid(
 
   return !limitReached;
 }
+

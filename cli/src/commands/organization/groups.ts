@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -9,6 +9,9 @@ import { Flags } from "@oclif/core";
 import { BaseCommand } from "../../utils/base-command";
 import { groupDefaultColumns } from "../user/groups";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class OrgGroups extends BaseCommand {
   static description = "Get the organization's groups";
 
@@ -33,3 +36,4 @@ export default class OrgGroups extends BaseCommand {
     return groups;
   }
 }
+

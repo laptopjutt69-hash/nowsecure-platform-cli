@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -9,6 +9,10 @@ import { BaseCommand } from "../../utils/base-command";
 import { User } from "@nowsecure/platform-lib/lib/types";
 import { Column } from "../../utils/table";
 
+/**
+ * TODO: Describe exported const
+ * @returns {*} Column<User
+ */
 export const userDefaultColumns: Column<User>[] = [
   { heading: "REF", data: "ref" },
   { heading: "NAME", data: "name" },
@@ -17,6 +21,9 @@ export const userDefaultColumns: Column<User>[] = [
   { heading: "ACTIVE", data: (x) => (x.active ? "Yes" : "No") },
 ];
 
+/**
+ * TODO: Describe exported class
+ */
 export default class OrgUsers extends BaseCommand {
   static description = "List users in the organization";
 
@@ -41,3 +48,4 @@ export default class OrgUsers extends BaseCommand {
     return ret;
   }
 }
+

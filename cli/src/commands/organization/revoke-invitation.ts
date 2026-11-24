@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -10,6 +10,9 @@ import { BaseCommand } from "../../utils/base-command";
 import { parseRef } from "../../utils/parsers";
 import { invitationDefaultColumns } from "./invitations";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class RevokeInvitation extends BaseCommand {
   static description = "Revoke an invitation to join your organization";
 
@@ -64,3 +67,4 @@ export default class RevokeInvitation extends BaseCommand {
     this.log(`Invitation ${ret} revoked`);
   }
 }
+

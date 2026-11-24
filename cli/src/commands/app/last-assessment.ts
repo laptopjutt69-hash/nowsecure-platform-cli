@@ -1,7 +1,10 @@
-import { Assessment } from "@nowsecure/platform-lib/lib/types";
+﻿import { Assessment } from "@nowsecure/platform-lib/lib/types";
 import { appRefArgs, appRefFlags, getFilter, resolveAppRef } from "../../utils";
 import { ShowAssessmentBase } from "../assessment/show";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class LastAssessment extends ShowAssessmentBase {
   static aliases = ["app:last"];
   static description =
@@ -43,3 +46,4 @@ export default class LastAssessment extends ShowAssessmentBase {
     return assessment;
   }
 }
+

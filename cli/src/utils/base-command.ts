@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -33,6 +33,9 @@ import { type AxiosError } from "axios";
 
 const USER_AGENT = `NowSecure CLI ${version} (${commit})`;
 
+/**
+ * TODO: Describe exported const
+ */
 export const CommonFlags = {
   token: Flags.string({
     summary: "Platform API token",
@@ -73,6 +76,9 @@ export const CommonFlags = {
 };
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
+/**
+ * TODO: Describe exported type
+ */
 export type ParserOutputAndClient<
   TFlags extends OutputFlags<any> = any,
   GFlags extends OutputFlags<any> = any,
@@ -173,3 +179,4 @@ export abstract class BaseCommand extends Command {
     outputTable(iter, columns, (x) => this.error(x, { exit: false }), prefix);
   }
 }
+

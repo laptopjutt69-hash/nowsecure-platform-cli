@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -12,8 +12,14 @@ import { CommandCore } from "./command-core";
 import { getGroupRef } from "./group-list";
 import { parseRef } from "./parsers";
 
+/**
+ * TODO: Describe exported const
+ */
 export const appRefArgs = packageArgs;
 
+/**
+ * TODO: Describe exported const
+ */
 export const appRefFlags = {
   ...groupFlags,
   ref: Flags.string({
@@ -29,6 +35,9 @@ type AppRefFlagsType = {
   ref: string | undefined;
 };
 
+/**
+ * TODO: Describe exported function
+ */
 export async function resolveAppRef(
   client: PlatformAPI,
   args: ArgOutput,
@@ -69,3 +78,4 @@ export async function resolveAppRef(
   }
   return matches[0].ref;
 }
+

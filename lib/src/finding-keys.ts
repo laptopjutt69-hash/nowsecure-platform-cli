@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -10,6 +10,9 @@ import { Assessment, Finding } from "./types";
 import { ValueError } from "./errors";
 import { JSONObject } from "./client";
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface KeyParams {
   fingerprint?: boolean;
   includePackage?: boolean;
@@ -18,6 +21,10 @@ export interface KeyParams {
   v1package?: string | null;
 }
 
+/**
+ * TODO: Describe exported const
+ * @returns {*} KeyParams
+ */
 export const DEFAULT_KEY_PARAMS: KeyParams = {
   fingerprint: true,
   includePackage: true,
@@ -29,12 +36,20 @@ export const DEFAULT_KEY_PARAMS: KeyParams = {
 /**
  * Take the SHA256 of an input string and output in hex.
  */
+/**
+ * TODO: Describe exported 
+ * @param {*} input
+ * @returns {*} string):
+ */
 export function sha256(input: string): string {
   return crypto.createHash("sha256").update(input).digest("hex");
 }
 
 /**
  * Derive a key for a finding
+ */
+/**
+ * TODO: Describe exported function
  */
 export function findingKey(
   assessment: Assessment,
@@ -58,11 +73,17 @@ export function findingKey(
   return sha256(keyInput.join("|"));
 }
 
+/**
+ * TODO: Describe exported type
+ */
 export type RuleIdAndFingerprint = {
   ruleId: string;
   partialFingerprints?: Record<string, string>;
 };
 
+/**
+ * TODO: Describe exported function
+ */
 export function ruleIdAndFingerprint(
   assessment: Assessment,
   finding: Finding,
@@ -95,6 +116,11 @@ export function ruleIdAndFingerprint(
   };
 }
 
+/**
+ * TODO: Describe exported 
+ * @param {*} keyData
+ * @returns {*} JSONObject):
+ */
 export function parseKeyConfig(keyData: JSONObject): KeyParams {
   const keyParams: KeyParams = { ...DEFAULT_KEY_PARAMS };
 
@@ -140,3 +166,4 @@ export function parseKeyConfig(keyData: JSONObject): KeyParams {
 
   return keyParams;
 }
+

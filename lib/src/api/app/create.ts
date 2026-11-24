@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -15,6 +15,9 @@ type CreateAppParams = {
   group?: string;
 };
 
+/**
+ * TODO: Describe exported function
+ */
 export async function createApp(
   client: NowSecureClient,
   platform: PlatformEnum,
@@ -34,3 +37,4 @@ export async function createApp(
   }
   return await client.post<AppResource>("/app/", body);
 }
+

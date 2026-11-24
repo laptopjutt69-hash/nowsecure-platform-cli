@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -11,6 +11,9 @@ import { Group } from "../../types";
 
 export { OrgGroupsQueryVariables as OrgGroupsOptions } from "../../generated/graphql";
 
+/**
+ * TODO: Describe exported function
+ */
 export async function orgGroups(
   client: NowSecureClient,
   options: OrgGroupsOptions
@@ -18,3 +21,4 @@ export async function orgGroups(
   const ret = await orgGroupsQuery(client, options);
   return ret.my.organization.groups;
 }
+

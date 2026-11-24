@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -12,6 +12,9 @@ import { Assessment } from "../../types";
 
 export { AssessmentsQueryVariables } from "../../generated/graphql";
 
+/**
+ * TODO: Describe exported function
+ */
 export async function listAssessments(
   client: NowSecureClient,
   options?: AssessmentsQueryVariables,
@@ -22,3 +25,4 @@ export async function listAssessments(
   assessments.forEach((x) => filterAssessment(x, filter));
   return assessments;
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -10,3 +10,4 @@ export * from "./is-license-valid";
 export * from "./list";
 export * from "./raw";
 export * from "./start";
+

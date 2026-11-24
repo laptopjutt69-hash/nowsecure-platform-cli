@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -11,6 +11,9 @@ import { BaseCommand } from "../../utils/base-command";
 import { getGroupsList } from "../../utils/group-list";
 import { parseRef } from "../../utils/parsers";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class InviteUser extends BaseCommand {
   static description = "Invite a user to join your organization";
 
@@ -81,3 +84,4 @@ export default class InviteUser extends BaseCommand {
     return ret;
   }
 }
+

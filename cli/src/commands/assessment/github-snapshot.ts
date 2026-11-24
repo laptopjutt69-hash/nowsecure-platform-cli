@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -10,6 +10,9 @@ import { BaseCommand } from "../../utils/base-command";
 import { parseRef } from "../../utils/parsers";
 import { convertToSnapshot } from "@nowsecure/github-snapshot";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class GitHubSnapshot extends BaseCommand {
   static description = "Create a SARIF report from an assessment";
 
@@ -104,3 +107,4 @@ export default class GitHubSnapshot extends BaseCommand {
     return snapshot;
   }
 }
+

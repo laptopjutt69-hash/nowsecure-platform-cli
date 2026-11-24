@@ -1,4 +1,4 @@
-import { Command, Flags } from "@oclif/core";
+﻿import { Command, Flags } from "@oclif/core";
 import fs from "fs";
 import os from "os";
 import path from "path";
@@ -28,6 +28,9 @@ function checkUrl(test: string) {
   }
 }
 
+/**
+ * TODO: Describe exported class
+ */
 export default class Configure extends Command {
   static strict = false;
 
@@ -233,3 +236,4 @@ export default class Configure extends Command {
     config.save(fullPath);
   }
 }
+

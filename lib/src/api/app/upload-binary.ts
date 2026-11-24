@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -10,6 +10,9 @@ import {
   UploadApplicationResponse,
 } from "../../types/platform";
 
+/**
+ * TODO: Describe exported enum
+ */
 export enum AnalysisType {
   FULL = "full",
   STATIC = "static",
@@ -69,6 +72,9 @@ interface FullUploadApplicationResponse extends UploadApplicationResponse {
   token: string;
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export async function uploadBinary(
   client: NowSecureClient,
   stream: NodeJS.ReadableStream,
@@ -84,3 +90,4 @@ export async function uploadBinary(
   delete ret.token;
   return ret;
 }
+

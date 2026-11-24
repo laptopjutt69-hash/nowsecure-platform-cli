@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -9,6 +9,9 @@ import { userDefaultColumns } from "../organization/users";
 import { groupDefaultColumns } from "./groups";
 import { FullUser } from "@nowsecure/platform-lib/lib/types";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class UserAccount extends BaseCommand {
   static description = "Current user details";
 
@@ -23,3 +26,4 @@ export default class UserAccount extends BaseCommand {
     return ret;
   }
 }
+

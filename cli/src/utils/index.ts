@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2023 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -14,3 +14,4 @@ export * from "./group-list";
 export * from "./parsers";
 export * from "./sub-command-lister";
 export * from "./table";
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -8,6 +8,9 @@ import { NowSecureClient } from "../../client";
 import { assessmentInfoQuery } from "../../queries";
 import { CancelAssessmentResponse } from "../../types";
 
+/**
+ * TODO: Describe exported function
+ */
 export async function cancelAssessment(
   client: NowSecureClient,
   assessmentRef: string
@@ -17,3 +20,4 @@ export async function cancelAssessment(
   const url = `/app/${assessment.platformType}/${assessment.packageKey}/assessment/${assessment.taskId}/cancel?group=${assessment.groupRef}`;
   return client.post<CancelAssessmentResponse>(url);
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -19,6 +19,9 @@ const appVulnerabilitiesDefaultColumns: Column<VulnerabilityEntry>[] = [
   { heading: "TITLE", data: "finding_title" },
 ];
 
+/**
+ * TODO: Describe exported class
+ */
 export default class GetAppVulnerabilities extends BaseCommand {
   static description = "Show application vulnerabilities";
 
@@ -46,3 +49,4 @@ export default class GetAppVulnerabilities extends BaseCommand {
     return vulnerabilities;
   }
 }
+

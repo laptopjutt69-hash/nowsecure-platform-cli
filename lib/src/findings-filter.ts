@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -10,6 +10,9 @@ import { JSONType } from "./client";
 import { ValueError } from "./errors";
 import { Severity } from "./types";
 
+/**
+ * TODO: Describe exported type
+ */
 export type FilterableFinding = {
   checkId: Maybe<string>;
   affected?: Maybe<boolean>;
@@ -29,6 +32,9 @@ const severities = [
   Severity.Info,
 ];
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface Filter {
   includeChecks: string[];
   excludeChecks: string[];
@@ -36,6 +42,10 @@ export interface Filter {
   includeWarnings: boolean;
 }
 
+/**
+ * TODO: Describe exported const
+ * @returns {*} Filter
+ */
 export const DEFAULT_FILTER: Filter = {
   severityFilter: severityFilter(Severity.Medium),
   includeWarnings: false,
@@ -48,6 +58,11 @@ export const DEFAULT_FILTER: Filter = {
  *
  * @param minSeverity minimum severity for the filter
  * @returns an array of all severities >= `minSeverity`
+ */
+/**
+ * TODO: Describe exported 
+ * @param {*} minSeverity
+ * @returns {*} Severity)
  */
 export function severityFilter(minSeverity: Severity) {
   return severities.slice(0, severities.indexOf(minSeverity) + 1);
@@ -84,6 +99,9 @@ export function findingMatchesFilter(
   return false;
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export function filterFindings<T extends FilterableFinding>(
   findings: T[],
   filter: Filter
@@ -93,6 +111,9 @@ export function filterFindings<T extends FilterableFinding>(
     : findings;
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export function filterAssessment(
   assessment: { report?: { findings: FilterableFinding[] } } | null | undefined,
   filter: Filter
@@ -107,6 +128,11 @@ export function filterAssessment(
 
 /** Returns true if the test parameter is a (possibly empty) array of strings */
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+/**
+ * TODO: Describe exported 
+ * @param {*} test
+ * @returns {*} any):
+ */
 export function isStringArray(test: any): test is string[] {
   return (
     Array.isArray(test) && test.findIndex((x) => typeof x !== "string") == -1
@@ -125,6 +151,9 @@ function isValidCheck(checkInputs: JSONType, listName: string) {
   return filteredChecks;
 }
 
+/**
+ * TODO: Describe exported interface
+ */
 export interface FilterConfig {
   "minimum-severity"?: Severity;
   "include-warnings"?: boolean;
@@ -136,6 +165,11 @@ export interface FilterConfig {
  *
  * @param filterConfig JSON representation of the filter
  * @returns
+ */
+/**
+ * TODO: Describe exported 
+ * @param {*} filterConfig
+ * @returns {*} FilterConfig):
  */
 export function parseFilter(filterConfig: FilterConfig): Filter {
   const checkedConfig: Filter = cloneDeep(DEFAULT_FILTER);
@@ -189,3 +223,4 @@ export function parseFilter(filterConfig: FilterConfig): Filter {
   }
   return checkedConfig;
 }
+

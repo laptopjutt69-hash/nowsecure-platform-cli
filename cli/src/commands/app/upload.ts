@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -12,6 +12,9 @@ import { UploadApplicationResponse } from "@nowsecure/platform-lib/lib/types";
 
 import { BaseCommand, getGroupRef, groupFlags } from "../../utils";
 
+/**
+ * TODO: Describe exported class
+ */
 export default class UploadBinary extends BaseCommand {
   static description = "Upload an application binary";
 
@@ -51,3 +54,4 @@ export default class UploadBinary extends BaseCommand {
     return ret;
   }
 }
+

@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
@@ -7,6 +7,9 @@
 import { JSONObject, NowSecureClient } from "../../client";
 import { assessmentsQuery } from "../../queries";
 
+/**
+ * TODO: Describe exported function
+ */
 export async function rawAssessmentData(
   client: NowSecureClient,
   assessmentId: string
@@ -27,3 +30,4 @@ export async function rawAssessmentData(
   const url = `/app/${asmt.platformType}/${asmt.packageKey}/assessment/${asmt.taskId}/_raw?group=${asmt.groupRef}`;
   return await client.get<JSONObject>(url);
 }
+

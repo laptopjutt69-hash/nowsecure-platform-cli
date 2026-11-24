@@ -1,10 +1,18 @@
-/*
+﻿/*
  * Copyright © 2022 NowSecure Inc.
  *
  * SPDX-License-Identifier: MIT
  */
 
+/**
+ * TODO: Describe exported 
+ * @param {*} (value
+ * @returns {*} T)
+ */
 export type generator<T> = keyof T | ((value: T) => string);
+/**
+ * TODO: Describe exported interface
+ */
 export interface Column<T> {
   heading: string;
   data: generator<T>;
@@ -17,6 +25,9 @@ function getGenerator<T>(gen: generator<T>): (value: T) => string {
   return gen;
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export function outputFields<T>(
   item: T,
   fields: Column<T>[],
@@ -30,6 +41,9 @@ export function outputFields<T>(
   log(lines.join("\n"));
 }
 
+/**
+ * TODO: Describe exported function
+ */
 export function outputTable<T>(
   iter: Iterable<T>,
   columns: Column<T>[],
@@ -64,3 +78,4 @@ export function outputTable<T>(
     log(prefix + line.map(padColumn).join("  "));
   }
 }
+
